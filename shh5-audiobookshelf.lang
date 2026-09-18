@@ -1,0 +1,97 @@
+[en-us]
+name = "Audiobookshelf"
+auth = "shh"
+descript = "Self-hosted audiobook and podcast server with metadata scraping and mobile apps."
+release_note = "1. Initial release."
+important = "Requires DockerEngine from the TOS App Center."
+
+[zh-cn]
+name = "Audiobookshelf"
+auth = "shh"
+descript = "有声书与播客服务器：自动刮削元数据、记录进度，配套 iOS/Android 客户端。"
+release_note = "1. 首次发布。"
+important = "需要先在 TOS 应用中心安装并启用 DockerEngine。"
+
+[zh-hk]
+name = "Audiobookshelf"
+auth = "shh"
+descript = "有声书与播客服务器：自动刮削元数据、记录进度，配套 iOS/Android 客户端。"
+release_note = "1. 首次發佈。"
+important = "需要先在 TOS 應用中心安裝並啟用 DockerEngine。"
+
+[fr-fr]
+name = "Audiobookshelf"
+auth = "shh"
+descript = "Self-hosted audiobook and podcast server with metadata scraping and mobile apps."
+release_note = "1. Initial release."
+important = "Requires DockerEngine from the TOS App Center."
+
+[de-de]
+name = "Audiobookshelf"
+auth = "shh"
+descript = "Self-hosted audiobook and podcast server with metadata scraping and mobile apps."
+release_note = "1. Initial release."
+important = "Requires DockerEngine from the TOS App Center."
+
+[it-it]
+name = "Audiobookshelf"
+auth = "shh"
+descript = "Self-hosted audiobook and podcast server with metadata scraping and mobile apps."
+release_note = "1. Initial release."
+important = "Requires DockerEngine from the TOS App Center."
+
+[es-es]
+name = "Audiobookshelf"
+auth = "shh"
+descript = "Self-hosted audiobook and podcast server with metadata scraping and mobile apps."
+release_note = "1. Initial release."
+important = "Requires DockerEngine from the TOS App Center."
+
+[hu-hu]
+name = "Audiobookshelf"
+auth = "shh"
+descript = "Self-hosted audiobook and podcast server with metadata scraping and mobile apps."
+release_note = "1. Initial release."
+important = "Requires DockerEngine from the TOS App Center."
+
+[ja-jp]
+name = "Audiobookshelf"
+auth = "shh"
+descript = "Self-hosted audiobook and podcast server with metadata scraping and mobile apps."
+release_note = "1. Initial release."
+important = "Requires DockerEngine from the TOS App Center."
+
+[ko-kr]
+name = "Audiobookshelf"
+auth = "shh"
+descript = "Self-hosted audiobook and podcast server with metadata scraping and mobile apps."
+release_note = "1. Initial release."
+important = "Requires DockerEngine from the TOS App Center."
+
+[pl-pl]
+name = "Audiobookshelf"
+auth = "shh"
+descript = "Self-hosted audiobook and podcast server with metadata scraping and mobile apps."
+release_note = "1. Initial release."
+important = "Requires DockerEngine from the TOS App Center."
+
+[ru-ru]
+name = "Audiobookshelf"
+auth = "shh"
+descript = "Self-hosted audiobook and podcast server with metadata scraping and mobile apps."
+release_note = "1. Initial release."
+important = "Requires DockerEngine from the TOS App Center."
+
+[tr-tr]
+name = "Audiobookshelf"
+auth = "shh"
+descript = "Self-hosted audiobook and podcast server with metadata scraping and mobile apps."
+release_note = "1. Initial release."
+important = "Requires DockerEngine from the TOS App Center."
+
+[pt-pt]
+name = "Audiobookshelf"
+auth = "shh"
+descript = "Self-hosted audiobook and podcast server with metadata scraping and mobile apps."
+release_note = "1. Initial release."
+important = "Requires DockerEngine from the TOS App Center."

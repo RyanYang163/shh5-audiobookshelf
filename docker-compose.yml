@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+  shh5-audiobookshelf:
+    image: advplyr/audiobookshelf:2.33.0
+    container_name: shh5-audiobookshelf
+    restart: unless-stopped
+    ports:
+      - "18805:80"
+    user: "1000:1000"
+    volumes:
+      - /Volume*/DockerAppData/shh5-audiobookshelf/data:/config
+    environment:
+      - TZ=Asia/Shanghai
+    security_opt:
+      - no-new-privileges:true
+    deploy:
+      resources:
+        limits:
+          cpus: "1000m"
+          memory: 1G
+
+x-app-meta:
+  web:
+    port: 18805
+    protocol: http
