@@ -1,45 +1,76 @@
 # Audiobookshelf
 
-| 项 | 值 |
+> TOS 7 application package for **Audiobookshelf** — platform integration only.
+> The application itself is provided by the upstream project, unmodified.
+
+## Overview
+
+Self-hosted audiobook and podcast server with metadata scraping and mobile apps.
+
+上游项目 / Upstream: <https://github.com/advplyr/audiobookshelf>
+上游许可证 / License: **GPL-3.0**
+
+## Features
+
+- Audiobook library with automatic metadata lookup
+- Podcast subscription and download
+- Per-user playback progress sync
+- Official iOS and Android apps
+
+## Installation
+
+1. Requirements: TOS 7.0+ and Docker Engine (install from the TOS App Center)
+2. Install from the TOS App Center
+3. Open the app and complete initial configuration
+
+## Usage
+
+1. Access URL: `http://${ip}:18805`
+2. Default credentials: see upstream documentation
+3. Key settings: see upstream documentation
+
+## Permissions
+
+| Permission | Rationale |
 |---|---|
-| 应用 ID | `shh5-audiobookshelf` |
-| 形态 | Docker 应用（Compose） · WebUI 外开（浏览器新标签） |
-| 版本 | 1.0.0 |
-| 上游项目 | https://github.com/advplyr/audiobookshelf |
-| 上游许可证 | GPL-3.0 |
-| 宿主端口 | 18805 |
+| Network: port 18805 | Web UI access |
+| File system: `/Volume*/DockerAppData/shh5-audiobookshelf/` | Application data persistence |
+| User: shh5audiobookshelf | Isolated non-root service execution |
 
-## 简介
+## Configuration
 
-有声书与播客服务器：自动刮削元数据、记录进度，配套 iOS/Android 客户端。
+See `config.ini` for platform metadata; see `docker-compose.yml` for runtime configuration.
 
-## 打包
+## Ports
 
-```bash
-./build.sh                # 默认 x86_64
-./build.sh aarch64        # ARM（Deb 应用）
-```
+| Port | Protocol | Purpose |
+|---|---|---|
+| 18805 | TCP | Web UI (Audiobookshelf) |
 
-产物在 `build/output/`，同级生成 `<包名>.sha256`。
+## Support
 
-## 提交前必办事项
+- Documentation: https://github.com/advplyr/audiobookshelf
+- Issue tracker: https://github.com/advplyr/audiobookshelf/issues
+- Community: https://github.com/advplyr/audiobookshelf
 
-- ⚠️ 必须锁定 ≥2.33.0：2.33.0 之前存在登录页自定义消息的 Stored XSS（GHSA-cx29-ghq2-9cm4），另有 Path Traversal 记录。
-- ⚠️ 官方明确「不建议使用 healthcheck」，理由是持续 ping + 自动重启会增加日志噪音。本 compose 尊重官方建议未定义 healthcheck，但若 TOS 审核强制要求，需自行补一个轻量检查。
-- 需要三个挂载点：/config（SQLite）、/metadata、以及媒体目录。
-- [ ] 真机安装、启动、停止、卸载残留四项实测
-- [ ] 首屏加载 ≤ 5 秒（指引 H10）
-- [ ] x86_64 与 aarch64 分别构建并测试（指引 H7）
-- [ ] 提交前跑一遍指引 13.9 上架前自查清单
+## Security & Compliance
 
-## 隐私政策
+- **License**: GPL-3.0 — full text in [`LICENSE`](./LICENSE)
+- **Attribution**: see [`NOTICE`](./NOTICE)
+- **Privacy Policy**: see [`PRIVACY.md`](./PRIVACY.md)
+- **Vulnerability scan**: `trivy-report.txt` attached to each Release (HIGH/CRITICAL must be 0)
+- Runs as a non-root dedicated user; no privileged mode, no host network
 
-见 [PRIVACY.md](./PRIVACY.md)（对应审核项 C3–C8）。
+## Changelog
 
-## 许可证与出处
+### v1.0.2 (2026-09-20)
+- Compliance update: added LICENSE / NOTICE / PRIVACY materials,
+  declared upstream license inside the package, added container healthcheck
 
-本仓库**仅包含 TOS 平台集成所需的配置文件与打包脚本**，应用本体的源码与二进制来自上游项目：https://github.com/advplyr/audiobookshelf
+### v1.0.0
+- Initial release
 
-上游许可证：**%s**。本封装保留上游许可证声明，未修改上游代码（Deb 形态下按上游许可证要求随包提供 LICENSE）。
+## License
 
-应用名称与图标为上游项目的标识；本仓库图标为自行绘制的简易图形，不含上游商标元素（对应审核项 H19）。
+**GPL-3.0** — this packaging repository is distributed under the same license as the
+upstream project. Full text: [`LICENSE`](./LICENSE).

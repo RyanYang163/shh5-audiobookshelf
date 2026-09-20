@@ -1,0 +1,10 @@
+{
+  "name": "Audiobookshelf",
+  "license": "GPL-3.0",
+  "port": 18805,
+  "license_url": "https://raw.githubusercontent.com/advplyr/audiobookshelf/master/LICENSE",
+  "healthcheck": "curl -fsS http://localhost:80/healthcheck >/dev/null || exit 1",
+  "en": "Self-hosted audiobook and podcast server with metadata scraping and mobile apps.",
+  "features": "- Audiobook library with automatic metadata lookup\n- Podcast subscription and download\n- Per-user playback progress sync\n- Official iOS and Android apps",
+  "date": "2026-09-20"
+}
