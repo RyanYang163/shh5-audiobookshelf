@@ -9,8 +9,6 @@
 # below is published by the upstream project and is used unmodified.
 # Full license text: see LICENSE in the repository root.
 # ============================================================================
-version: "3.8"
-
 services:
   shh5-audiobookshelf:
     image: advplyr/audiobookshelf:2.33.0
@@ -27,6 +25,7 @@ services:
     user: "1000:1000"
     volumes:
       - /Volume*/DockerAppData/shh5-audiobookshelf/data:/config
+      - /Volume*/DockerAppData/shh5-audiobookshelf/metadata:/metadata
     environment:
       - TZ=Asia/Shanghai
     security_opt:
@@ -34,7 +33,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "1000m"
+          cpus: "1.0"
           memory: 1G
 
 x-app-meta:
